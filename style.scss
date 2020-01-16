@@ -1,0 +1,104 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//class for removing and adding notifications div
+.remove-div {
+  display: none !important;
+}
+
+//general styling of all div, h3 and hr elements
+div,
+h3 {
+  padding-left: 35px;
+}
+
+h3 {
+  text-shadow: 0px 1px 3px rgb(124, 124, 124);
+}
+hr {
+  width: 90%;
+}
+
+//width of notifications container
+.row-notifications {
+  width: 50%;
+  margin-left: -8px !important;
+  margin-top: 15px;
+}
+.container-notifications {
+  border-radius: 10px;
+  box-shadow: 0px 2px 11px -5px rgba(0, 0, 0, 0.75);
+  padding: 0 !important ;
+  transition: width 2s ease-in;
+  .title {
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #6a98ee;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+
+  .imgContainer {
+    display: inline;
+    img {
+      width: 11%;
+    }
+  }
+  h3[data-index="1"] {
+    display: inline;
+  }
+  a[data-index="1"] {
+    position: relative;
+    top: 25px;
+    right: 310px;
+  }
+}
+
+//Button
+.btn-notifications {
+  margin-top: 15px;
+  margin-left: 35px;
+}
+.buble-notification-container {
+  background: #e34d2c;
+  border-radius: 48%;
+  padding: 0 9px 2px 9px;
+  position: absolute;
+  left: 75px;
+  top: 5px;
+  color: white;
+}
+@media only screen and (max-width: 600px) {
+  .row-notifications {
+    width: 100%;
+  }
+  div,
+  h3 {
+    padding-left: 0px;
+  }
+  .container-notifications {
+    .imgContainer {
+      img {
+        width: 17%;
+      }
+    }
+
+    a[data-index="1"] {
+      position: static;
+    }
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .container-notifications {
+    a[data-index="1"] {
+      position: static;
+    }
+  }
+}

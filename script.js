@@ -14,7 +14,7 @@ let apiArr = [
 
         text: 'Test text notification',
 
-        expires: 3600
+        expires: 3900
 
     },
 
@@ -28,7 +28,7 @@ let apiArr = [
 
         requirement: 'Deposit $50 to win',
 
-        expires: 3600
+        expires: 4600
 
     },
 
@@ -56,7 +56,7 @@ let apiArr = [
 
         text: 'Test text notification',
 
-        expires: 5
+        expires: 5000
 
     }
 
@@ -109,18 +109,13 @@ for (let i = 0; i < api.length; i++) {
     }
 }
 
+
 //Toggle dropdown menu 
 button.addEventListener('click', () => {
     document.querySelector('.row-notifications').classList.toggle('remove-div');
     bubbleNotificationsContainer.remove();
 })
-//Tried to settimeout and remove the elements from the array with expire tag , but it didn't work out.
-// for (let j = 0; j < arrTime.length; j++) {
-//     setTimeout(() => {
 
-
-//     }, arrTime[j]);
-// }
 
 //filters from objects in the array with expire tag
 api = api.filter((value, ind) => {
